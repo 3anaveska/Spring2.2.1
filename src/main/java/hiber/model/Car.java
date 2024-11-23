@@ -10,18 +10,18 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "cars")
+@Table
 public class Car {
     @Id
     @GeneratedValue
     private int id;
-    @Column(name = "model")
+    @Column
     private String model;
-    @Column(name = "series")
+    @Column
     private int series;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @JoinColumn
     private User user;
 
     public Car() {}
